@@ -1,1 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 
+* {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-wrapper {
+  width: 1020px;
+  margin: auto;
+}
+
+/* Header */
+
+.header {
+  height: 90px;
+}
+
+.header::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 48px 0 48px;
+  border-color: #323232 transparent transparent transparent;
+}
+
+.line-separate {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.line-separate::before {
+  content: '';
+  position: absolute;
+  left: 3%;
+  width: 40%;
+  height: 1px;
+  background: #e4e9eb;
+  top: -30px;
+}
+
+.line-separate::after {
+  content: '';
+    position: absolute;
+    right: 3%;
+    width: 40%;
+    height: 1px;
+    background: #e4e9eb;
+    top: -30px;
+}
+
+.navigation {
+  height: 63px;
+  background-color: #323232;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list li:not(.main-logo) {
+  font: 11px 'Lato';
+  padding: 10px 25px 0 0;
+  text-transform: uppercase;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-list li a:hover {
+  transition: all ease-out 0.3s;
+  color: #2eb398;
+}
+
+.main-logo {
+  position: relative;
+  top: 10px;
+  right: 18px;
+  margin: 0 20px 0;
+}
