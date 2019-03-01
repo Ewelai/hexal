@@ -15,20 +15,23 @@
   overflow: hidden;
 }
 
-.main-wrapper {
-  width: 1020px;
-  margin: auto;
-}
-
 /* Header */
 
 .header {
+  width: 100%;
   height: 90px;
 }
 
-.header::after {
+.header-wrapper {
+  margin: 0 auto;
+  width: 1020px;
+}
+
+.header-wrapper::after {
   content: "";
   display: block;
+  position: relative;
+  bottom: 1px;
   margin: 0 auto;
   width: 0;
   height: 0;
@@ -38,32 +41,35 @@
 }
 
 .line-separate {
-  display: inline-block;
+  display: flex;
+  margin: auto;
   position: relative;
-  width: 100%;
+  width: 75%;
 }
 
 .line-separate::before {
   content: '';
   position: absolute;
-  left: 3%;
+  left: 2%;
   width: 40%;
   height: 1px;
   background: #e4e9eb;
-  top: -30px;
+  top: -20px;
 }
 
 .line-separate::after {
   content: '';
-    position: absolute;
-    right: 3%;
-    width: 40%;
-    height: 1px;
-    background: #e4e9eb;
-    top: -30px;
+  position: absolute;
+  right: 2%;
+  width: 40%;
+  height: 1px;
+  background: #e4e9eb;
+  top: -20px;
 }
 
 .navigation {
+  display: flex;
+  justify-content: center;
   height: 63px;
   background-color: #323232;
 }
@@ -72,12 +78,13 @@
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding-left: 5px;
+  justify-content: space-between;
+  width: 400px;
 }
 
-.nav-list li:not(.main-logo) {
+.nav-list li {
   font: 11px 'Lato';
-  padding: 10px 25px 0 0;
   text-transform: uppercase;
 }
 
@@ -93,7 +100,96 @@
 
 .main-logo {
   position: relative;
+  z-index: 99;
   top: 10px;
-  right: 18px;
-  margin: 0 20px 0;
+}
+
+/* Main content */
+
+.main {
+  width: 100%;
+}
+
+.slider {
+  width: 1020px;
+  padding-top: 70px;
+  margin: auto;
+}
+
+.hex-wrapper {
+  display: flex;
+}
+
+.hex-wrapper:nth-child(odd) {
+  margin: -30px 100px;
+}
+
+.hex-wrapper:nth-child(odd):before,
+.hex-wrapper:nth-child(odd):after {
+  content: "";
+  display: flex;
+  align-self: center;
+  height: 100px;
+  width: 1px;
+  border-left: 1px solid #e4e9eb;
+}
+
+.hexagon {
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  background-size: cover;
+  margin: 0 auto;
+  height: 200px;
+  width: 180px; 
+}
+
+.hexagon.monster-1 {
+  background-image: url('./assets/monster-1.png');
+}
+
+.hexagon.monster-2 {
+  background-image: url('./assets/monster-2.png');
+}
+
+.hexagon.monster-3 {
+  background-image: url('./assets/monster-3.png');
+}
+
+.hexagon.monster-4 {
+  background-image: url('./assets/monster-4.png');
+}
+
+.hexagon.monster-5 {
+  background-image: url('./assets/monster-5.png');
+}
+
+.hexagon.monster-6 {
+  background-image: url('./assets/monster-6.png');
+}
+
+.hexagon.monster-7 {
+  background-image: url('./assets/monster-7.png');
+}
+
+.hexagon.monster-8 {
+  background-image: url('./assets/monster-8.png');
+}
+
+.hexagon.monster-9 {
+  background-image: url('./assets/monster-9.png');
+}
+
+.hexagon.monster-10 {
+  background-image: url('./assets/monster-10.png');
+}
+
+.hexagon.monster-11 {
+  background-image: url('./assets/monster-11.png');
+}
+
+.hexagon.monster-12 {
+  background-image: url('./assets/monster-12.png');
+}
+
+.hexagon.monster-13 {
+  background-image: url('./assets/monster-13.png');
 }
